@@ -4,6 +4,7 @@ import axios from 'axios';
 import Trailer from './components/Trailer';
 import ImgPlot from './components/ImgPlot';
 import MovieData from './components/MovieData';
+import NavBar from './components/NavBar'
 
 function App() {
 
@@ -21,9 +22,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Imdb API exersise</h1>
-       <Trailer trailer={data.trailer}/>
+       <NavBar />
        <ImgPlot img={data.image}/>
+       <Trailer trailer={data.trailer}/>
        <MovieData title={data.title} rating={data.imDbRating} plot={data.plot} director={data.directors} actors={data.stars}/>
     </div>
   );
